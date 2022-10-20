@@ -6,4 +6,31 @@ int main(){
 	printf("Matricula: UC22103250\nCurso: Engenharia de Software\nLink do Repositorio: https://github.com/enrique-sem-h/provaAlgoritmo\n");
 	printf("Software utilizado: Dev-C++\n");
 
+	char opcaoMenu;
+	
+	printf("\nDigite a opcao desejada:\nA - Questao A\nB - Questao B\nC - Questao C\n");
+	scanf("%c", &opcaoMenu);
+	
+	switch(opcaoMenu)
+	{
+		case 'A':
+			float catop, catad, hip, seno;
+			
+			printf("Digite o valor para o cateto oposto: ");
+			scanf("%f", &catop);
+			
+			printf("Digite o valor para o cateto adjacente: ");
+			scanf("%f", &catad);
+			
+			hip = sqrt(pow(catop,2) + pow(catad,2));
+			seno = catop / hip;
+			
+			printf("Hipotenusa: %.3f\nSeno: %.3f", hip, seno);
+			break;
+
+		default: 
+			printf("Opcao Invalida");
+	}
+
+
 }
