@@ -28,6 +28,25 @@ int main(){
 			printf("Hipotenusa: %.3f\nSeno: %.3f", hip, seno);
 			break;
 
+		case 'B':
+			char nome[100];
+			int ano;
+			
+			fflush(stdin);
+			printf("Digite o nome do usuario: ");
+			scanf("%s", &nome);
+			fflush(stdin);
+			
+			printf("Digite um ano valido(entre 1900 e 2022): ");
+			scanf("%d", &ano);
+			
+			if((ano % 4 == 0 && ano % 100 != 0) || (ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0))
+				printf("Nome: %s, %d e um ano bissexto", nome, ano);
+			else
+				printf("Nome: %s, %d nao e um ano bissexto", nome, ano);
+			
+			break;
+
 		default: 
 			printf("Opcao Invalida");
 	}
