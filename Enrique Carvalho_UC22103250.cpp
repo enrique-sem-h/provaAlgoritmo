@@ -14,7 +14,18 @@ int main(){
 	switch(opcaoMenu)
 	{
 		case 'A':
-		
+			float catop, catad, hip, seno;
+			
+			printf("Digite o valor para o cateto oposto: ");
+			scanf("%f", &catop);
+			
+			printf("Digite o valor para o cateto adjacente: ");
+			scanf("%f", &catad);
+			
+			hip = sqrt(pow(catop,2) + pow(catad,2));
+			seno = catop / hip;
+			
+			printf("Hipotenusa: %.3f\nSeno: %.3f", hip, seno);
 			break;
 
 		case 'B':
